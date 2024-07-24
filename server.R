@@ -61,6 +61,7 @@ shinyServer(function(input, output, session) {
           # Add the result to the results list
           results[[length(results) + 1]] <- data.frame(
             Bait = cond1,
+            Control= cond2,
             Prey = protein,
             SpecSum = paste(data_cond1$spectral_counts, collapse = "|"),
             ctrlCounts = paste(data_cond2$spectral_counts, collapse = "|"),
