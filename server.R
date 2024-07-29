@@ -60,7 +60,7 @@ shinyServer(function(input, output, session) {
         
         # Check if there are enough observations for t-test
         if (nrow(data_cond1) > 1 & nrow(data_cond2) > 1) {
-           t_test_results <- col_t_welch(data_cond1[,"spectral_counts"], data_cond2[,"spectral_counts"])
+           t_test_results <- col_t_welch(data_cond1[,"spectral_counts"], data_cond2[,"spectral_counts"],alternative = "greater")
           
           
           # Add the result to the results list
